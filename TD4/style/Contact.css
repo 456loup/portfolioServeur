@@ -1,0 +1,27 @@
+body{
+    background-color: lightgray;
+}
+
+.row{
+    text-align: center;
+}
+
+
+.lignePrincipale {
+    border: solid black 5px; 
+}
+
+.Information{
+    border : solid black 2px; 
+}
+
+.adresseMail{
+    border:solid black; 
+}
+
+.Vide{
+    min-height: 390px;
+    border:solid black 2px; 
+}
+
+

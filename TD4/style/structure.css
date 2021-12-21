@@ -1,0 +1,45 @@
+
+
+body{
+    background-color:lightgrey; 
+}
+
+
+.Activite{
+    background-image: url(../Ressource/depannageTransp.jpg); 
+    border : solid black 2px; 
+    min-height: 250px;
+}
+
+.Domaine{
+    background-image: url(../Ressource/domainesTransp.jpg); 
+    background-position-y: -3em;
+    min-height: 250px;
+}
+
+.Marques{
+    background-image : url(../Ressource/Marques/fournisseursTransp.jpg); 
+    border : solid black 2px; 
+    min-height: 500px;
+}
+
+.Client{
+    background-image : url(../Ressource/Clients/clientsTransp.jpg);
+    
+    min-height: 500px;
+}
+
+.ligne3{
+    text-align: center;
+    border : solid black 2px; 
+}
+
+.ligne1{
+    text-align: center;
+    border : solid black 2px; 
+}
+
+
+
+
+

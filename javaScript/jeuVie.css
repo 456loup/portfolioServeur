@@ -1,0 +1,12 @@
+
+.jeuVieCadre{
+    display : flex;
+
+}
+
+
+button{
+    width: 10em;
+    height: 10em;
+    font-size : 2em; 
+}

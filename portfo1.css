@@ -1,0 +1,348 @@
+
+/* GENERAL   */
+body{
+    font-family: 'Lato' ,  sans-serif;
+}
+
+h1 h2 h3 h4 h5 h6{
+    font-weight: bold;
+}
+
+img{
+    max-width:100%;
+    height : 500px; 
+    object-fit:cover; 
+    border-radius:20px; 
+
+}
+
+section{
+    padding: 45px 0px 85px 0;  
+}
+
+
+/* Fin General  */
+
+
+
+
+
+/* Premiere Section  */
+
+
+
+#about{
+    padding-top:100px; 
+    background:#D82C2E; 
+
+}
+
+#about .heading h1{
+    color : white; 
+    text-transform: uppercase; 
+}
+
+#about .heading h3{
+    color: black; 
+}
+
+section .heading{
+
+    text-align: center;
+    padding-bottom:40px; 
+
+}
+
+
+.profile-picture{
+    text-align: center;
+    margin: 0 auto; 
+    float:none; 
+
+}
+
+.button1{
+    border:solid white 2px; 
+    font-weight:bold; 
+    text-transform: uppercase;
+    color : white; 
+    margin-top : 20px; 
+    padding:10px; 
+    border-radius:3px; 
+    display:inline-block; 
+}
+
+.button1:hover{
+    background-color : white; 
+    color:#D82C2E; 
+    text-decoration: none;
+    transition: all 0.3s ease-in 0s; 
+    cursor:default; 
+}
+
+/* Competences   */
+
+
+#skills{
+    background-color : white; 
+}
+
+#skills .heading h1{
+    text-transform: uppercase;
+    color: #D82C2E; 
+
+}
+
+#skills .progress{
+    height:100%; 
+    margin: 30px 20px; 
+    background-color:#ddd; 
+}
+
+#skills .progress-bar{
+
+    background-color:#D82C2E; 
+
+
+}
+
+.red-divider{
+    margin-top:20em; 
+    width:100px; 
+    height:5px; 
+    background-color:#D82C2E; 
+    margin:0 auto; 
+}
+
+/* Mise en place de la time line   */
+
+
+
+.white-divider{
+    height:5px; 
+    width:10%; 
+    background-color: white;
+    margin:0 auto; 
+}
+
+
+#experience{
+
+    background-color:#D82C2E; 
+
+}
+
+#experience .heading h1{
+
+    color:white; 
+
+}
+
+.timeline{
+    padding: 30px 10px; 
+    position:relative; 
+}
+
+.timeline:before{
+    top:0; 
+    bottom:0; 
+    position:absolute; 
+    content:" "; 
+    width:5px; 
+    background-color:#333; 
+    left:50%;
+    margin-left:-2.5px; 
+}
+
+
+
+.timeline > li{
+    margin-bottom: 20px; 
+    position:relative; 
+}
+
+.timeline > li:after{
+    clear:both /* pour nettoyer le float left et right  */
+
+}
+
+.timeline > li:before , .timeline > li:after{
+    content:" "; 
+    display:table; 
+}
+
+
+.timeline li .timeline-badge{
+    color:#D82C2E; 
+    width:50px; 
+    line-height:50px; 
+    font-size:20px; 
+    text-align:center; 
+    position:absolute; 
+    top:16px; 
+    left:50%; 
+    margin-left:-25px; 
+    background-color:#ddd; 
+    border-radius:50%; 
+}
+
+.timeline-panel-container{
+    width:50%; 
+    float:left; 
+}
+
+.timeline-panel-container-inverted{
+    width:50%; 
+    float:right; 
+}
+
+.timeline-panel{
+    width:60%; 
+    float:right; 
+    margin-right:40px; 
+    border:1px solid #64646464; 
+    border-radius:7px; 
+    padding:20px 25px; 
+    position:relative;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.175); 
+    background-color:white; 
+}
+
+.timeline-panel-container-inverted .timeline-panel{
+    float:left; 
+    margin-left:40px; 
+}
+
+.timeline-panel:after{
+    position:absolute; 
+    top:27px; 
+    right:-14px; 
+    display:inline-block; 
+    border-top:14px solid transparent; 
+    border-right: 0 solid white; 
+    border-bottom: 14px solid transparent; 
+
+}
+
+
+
+/* Partie competence ou education  */
+
+#education  .heading h1{
+    color:#D82C2E; 
+}
+
+.education-block{
+    width:80%; 
+    margin: 0 auto; 
+    text-align:center; 
+    padding: 30px; 
+    background: #ddd; 
+    border-radius:10px; 
+    border: 20px solid #ccc; 
+    margin-bottom:20px; 
+    min-height: 400px;
+    
+}
+
+
+/* -----------------------------------------------  Partie Portfolio ----------------------------------------------------------------- */
+
+#GeekRuthenois{
+    background-color: #ddd;
+    padding: 50px; 
+    border-radius: 20px; 
+    cursor:pointer; 
+    font-size:large; 
+}
+
+#conteneur1GeekRuthenois{
+    min-height:100px;  
+    padding: 70px 0px; 
+    text-align:center; 
+}
+
+/* partie presentation du jeu de la vie  */
+
+
+#jeuDeLaVie{
+    background-color: #ddd;
+    padding: 50px; 
+    border-radius: 20px; 
+    cursor:pointer; 
+    font-size:large; 
+}
+
+#conteneurJeuDeLaVie{
+
+    min-height:100px;  
+    padding: 70px 0px; 
+    text-align:center; 
+}
+
+
+/* partie presentation du site pour la communication pour les info 1  */
+
+#conteneurSiteCom{
+
+    min-height:100px;  
+    padding: 70px 0px; 
+    text-align:center; 
+}
+
+#siteCom{
+    background-color: #ddd;
+    padding: 50px; 
+    border-radius: 20px; 
+    cursor:pointer; 
+    font-size:large; 
+}
+
+
+#trait-rouge{
+    background-color: red; 
+}
+
+
+#Portfolio12{
+    color:red; 
+}
+
+
+/* Menu  */
+
+
+.navbar{
+    background-color: #D82C2E; 
+    font-size: 12px; 
+    letter-spacing: 4px; 
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+
+.navbar .navbar-nav{
+    display: inline-block; 
+    float:none; 
+    vertical-align: top; 
+}
+
+.navbar .navbar-collapse{
+    text-align: center; 
+}
+
+.navbar li a{
+    color: #fff !important; 
+}
+
+.navbar-nav li a:hover , .navbar-nav li.active a{
+    color: #D82C2E !important; 
+    background-color: #fff !important; 
+}
+
+.navbar-default .navbar-toggle{
+    border-style: none; 
+}
+
+.icon-bar{
+    background-color: #fff !important; 
+}

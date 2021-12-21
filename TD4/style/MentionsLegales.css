@@ -1,0 +1,33 @@
+body{
+    background-color: lightgray;
+}
+
+
+.LigneTexte{
+    text-align: center;
+}
+
+
+.piedDePage{
+    text-align: center;
+}
+
+.ligneMentionLegale{
+    text-align: center;
+    color:red; 
+}
+
+.hautDePage{
+    border: solid black 5px; 
+}
+.ligneMentionLegale{
+    border : solid black 5px; 
+}
+
+.LigneTexte{
+    border : solid black 5px; 
+}
+
+.piedDePage {
+    border : solid black 5px; 
+}

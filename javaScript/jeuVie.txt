@@ -1,0 +1,117 @@
+
+
+// On commence par initialiser les variable essentielles 
+
+const canvas = document.querySelector('.canva');
+const contexte = canvas.getContext('2d'); 
+const resolution = 10; 
+canvas.width = 1000;
+canvas.height = 800; 
+const COLS = Math.floor(canvas.width / resolution); 
+const ROWS =  Math.floor(canvas.height / resolution) ; 
+
+// fonction attendre qui prend en parametre un nombre de mili seconde 
+
+function sleep(ms) {
+    let currentTime = Date.now()
+    while(currentTime + ms > Date.now()) {}
+}
+
+// fonction qui construit la grille (retourne une grille d'entier 0 ou 1 )
+
+function buildGridAleatoire(ROWS , COLS ){
+    return new Array(ROWS).fill(null).map(
+        () => new Array(COLS).fill(0).map(
+            () => Math.floor(Math.random() * 2 ) ) 
+    )
+}
+
+// Fonction qui actualise le rendu de la matrice d'entier 
+function render(grid , contexte){
+
+    contexte.clearRect(0 , 0 , contexte.width , contexte.height); 
+    // on dessine chacune des cases de la grille si la cellule 
+    // est vivante elle sera en noir , sinon en blanc 
+    for(let col = 0 ; col < grid.length; col++){
+        for(let row = 0 ; row < grid[col].length ; row++){
+
+          
+            const cell = grid[col][row]; 
+            contexte.beginPath(); 
+            contexte.rect(col * resolution ,  row * resolution , resolution , resolution); 
+            contexte.fillStyle = cell == 1 ? 'black' : 'white';  
+            contexte.fill(); 
+            contexte.stroke();  
+        }
+    }
+}
+
+// Fonction qui update la matrice 1 FOIS 
+function nouvelleGeneration(grid){
+
+    let newGrid = grid.map(arr => [...arr]); 
+
+    console.log(newGrid); 
+    let compteur = 0 ; 
+    let cellule = 0;
+    let row = 0; 
+    let col = 0; 
+    let i = 0; 
+    let y = 0 
+
+    /* On itere sur chaque case de la grid  */
+    for( row = 0 ; row < newGrid.length ; row++){
+        for( col = 0 ; col < newGrid[row].length ; col++){
+
+            /* Ici on defini la cellule en question  */
+            cellule = grid[row][col]; 
+
+            /* Cette  iteration a pour but de compter le nombre de voisins   */
+            for( i = -1 ; i < 2  ; i++){
+                for( y = -1 ; y < 2  ; y++){
+
+                    /* Cette condition gère les cas ou la case est en bordure , voir dans un angles 
+                    droit de la grille  */
+                    if( !(row + i < 0 || row+i >= grid.length || col+y < 0 || col+y >= grid[row].length) 
+                    && !(i == 0 && y == 0) ){
+                        
+                        compteur += grid[row+i][col+y]; 
+                    }
+                }
+            }
+
+            /* On applique ensuite les règles du jeu de la vie , étant donné que l'on 
+            connait le nombre de voisin , on peut faire toutes les décisions nécessaires  */
+
+            if(cellule == 1 ){
+                if(compteur < 2 || compteur > 3){
+                    newGrid[row][col] = 0; 
+                }
+            }else{
+                if(compteur == 3 ){
+                    newGrid[row][col] = 1; 
+                }
+            }
+
+            // On oublie pas de mettre le compteur a vide pour la prochaine iteration 
+            compteur = 0; 
+        }
+    }
+
+    return newGrid; 
+}
+
+/* fonction boucle principale du jeu */
+
+function update(){
+    grid = nouvelleGeneration(grid); 
+    render(grid , contexte); 
+    requestAnimationFrame(update); 
+}
+
+/* lancement du jeu  */
+
+
+let grid = buildGridAleatoire(ROWS, COLS); 
+
+requestAnimationFrame(update); 

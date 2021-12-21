@@ -1,0 +1,16 @@
+.MaterielALaVente{
+    text-align: center;
+    color:red; 
+}
+
+.row{
+    border:solid blue 2px; 
+}
+
+.ligneDuBas{
+    text-align: center; 
+}
+
+.body{
+    background-color: lightgrey; 
+}
